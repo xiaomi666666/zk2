@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <p>
+                <i class="icon iconfont icon-xiangzuo"></i>
+                <span>返回</span>
+            </p>
+            <h3>爱心筹--发布</h3>
+            <i class="icon iconfont icon-share"></i>
+        </header>
+        <main class="main">
+            <ul class="list">
+                <li style="color:crimson">
+                    大病救助
+                </li>
+                <li>目标金额:1700000</li>
+                <li>资金用途：白血病治疗</li>
+                <li>截止日期：2018-08-10</li>
+            </ul>
+            <div class="drag">
+                <b>3天</b>
+                <div class="line">
+                    <p class="red-line"> <span class="dot"></span></p>
+
+                </div>
+                <b>30天</b>
+            </div>
+            <div class="empty">
+            </div>
+            <div class="thing">
+                <h5>请救救我的女儿，她还想参加中考</h5>
+                <p>
+                    建议详细描述爱心人的描述：后视镜历史上坚实的开始科技大黄蜂焦点时款到发货就可获得宽度姐夫分库懒得搭理到登录开发费才看见对方可大了发了多少即可看到凤凰科技跨境电商垃圾分类多看看房间里
+                </p>
+            </div>
+            <div class="cont">
+                <p class="async">
+
+
+                    项目内容和项目图片：后视镜历史上坚实的开始科技大黄蜂焦点时款到发货就可获得宽度姐夫分库懒得搭理到登录开发费才看见对方可大了发了多少即可看到凤凰科技跨境电
+
+
+                </p>
+            </div>
+            <div class="file">
+                <div class="item">
+                    <svg class="addImg" aria-hidden="true">
+                                <use xlink:href="#icon-tianjiatupian"></use>
+                            </svg>
+                    <input name="url" type="file" class="upload_input" onchange="preview(this)" />
+                    <div class="preview"></div>
+                    <div class="click" onclick="loadImg(this)"></div>
+                    <div class="delete" onclick="deleteImg(this)">
+                        <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shanchu4"></use>
+                              </svg>
+                    </div>
+                </div>
+                <div class="bot">
+                    <p>
+                        得宽度姐夫分库懒得搭理到登录开发费才看见对方可大了发了多少即可看到凤凰科技跨境电
+                    </p>
+                    <button>发布项目</button>
+                </div>
+        </main>
+        </div>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            function preview(file) {
+                var prevDiv = $(file).parent().find('.preview');
+                if (file.files && file.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(evt) {
+                        prevDiv.html('<img src="' + evt.target.result + '" />');
+                    }
+                    reader.readAsDataURL(file.files[0]);
+                } else { //IE
+                    prevDiv.html('<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>');
+                }
+                $(file).parent().find('.delete').show();
+            }
+            preview();
+        </script>
+</body>
+
+</html>
